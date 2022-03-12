@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/52a28dcdb5.js" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            font: normal 16px/1.5 PingFangSC-regular, Tahoma, Lucida Grande, Verdana,
+                Microsoft Yahei, STXihei, hei;
+            color: #000;
+            max-width: 2000px;
+            min-width: 320px;
+            margin: 0 auto;
+            background: #f4f4f4;
+        }
+
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #222;
+        }
+
+        div {
+            box-sizing: border-box;
+            /* 把border count to the box */
+        }
+
+
+        header {
+            width: 100%;
+            height: 153px;
+            background-color: #131313;
+        }
+
+        .nav_bar {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .nav_bar::after {
+            content: "+";
+            position: absolute;
+            top: 51px;
+            right: 40px;
+            color: #fff;
+            width: 50px;
+            height: 50px;
+            font-size: 42px;
+            border: 2px solid #fff;
+            border-radius: 30px;
+            cursor: pointer;
+            background-color: #131313;
+
+        }
+
+        .nav_bar ul {
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            max-width: 690px;
+        }
+
+        .nav_bar li {
+            display: flex;
+            align-items: center;
+            font-size: 22px;
+        }
+
+        .nav_bar a {
+            color: #c8c8c8;
+            text-shadow: 2px 2px 8px rgb(121, 54, 54);
+        }
+
+        .marvel {
+            width: 100%;
+            height: 600px;
+            margin: 100px auto;
+
+
+        }
+
+        .marve-box {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .marve-box img {
+            width: 100%;
+            height: 100%;
+            background-color: #131313;
+        }
+
+        .marve-box h1 {
+            padding-top: 10px;
+            color: #a7a1a1;
+            text-shadow: 2px 2px 8px rgb(175, 175, 175);
+
+        }
+
+        .profile {
+            width: 100%;
+            height: 1200px;
+            margin-top: 150px;
+            background-color: #131313;
+
+
+        }
+
+        .profile-box {
+            width: 1600px;
+            height: 100%;
+            margin: 0 auto;
+
+        }
+
+        .pro-box {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            margin-top: 100px;
+
+        }
+
+        .pro-item {
+            flex: 1;
+            padding-top: 50px;
+        }
+
+        .pro-item img {
+            width: 700px;
+            height: 480px;
+        }
+
+        .pro-item h2 {
+            font-size: 32px;
+            letter-spacing: 2px;
+            padding-bottom: 20px;
+            color: #a7a1a1;
+        }
+
+        .pro-item p {
+            font-size: 20px;
+            color: #a7a1a1;
+        }
+
+        .pro-item i {
+            width: 100px;
+            height: 100px;
+            font-size: 48px;
+            color: #902e2f;
+
+
+        }
+
+        .pro-item a {
+            display: block;
+            width: 700px;
+            height: 480px;
+            text-align: center;
+            line-height: 500px;
+            padding: 20px;
+
+        }
+
+        .ironimg {
+            margin-bottom: 50px;
+            padding-left: 50px;
+        }
+
+        .professional-skill {
+            width: 100%;
+            height: 600px;
+            color: #a7a1a1;
+            margin-top: 300px;
+            margin-bottom: 200px;
+
+        }
+
+
+        .skills h3 {
+            text-align: center;
+            font-size: 32px;
+            letter-spacing: 2px;
+            margin-bottom: 50px;
+            padding-bottom: 15px;
+            text-shadow: 2px 2px #131313;
+            border-bottom: 5px solid #902e2f;
+
+        }
+
+
+        .skills ul {
+            display: flex;
+            text-align: center;
+
+        }
+
+        .skills li {
+
+            flex: 1;
+            margin-left: 50px;
+            margin-bottom: 50px;
+            padding: 20px;
+            background-color: #131313;
+            border-bottom: 5px solid #902e2f;
+
+
+        }
+
+        .skills li h4 {
+            padding: 60px 40px;
+            font-size: 26px;
+            color: #a7a1a1;
+        }
+
+        .skills li p {
+            padding: 50px 50px;
+            font-size: 20px;
+            color: #a7a1a1;
+
+        }
+
+        .skills img {
+            width: 500px;
+            height: 300px;
+        }
+
+        .work-experience {
+            width: 100%;
+            height: 800px;
+        }
+
+        .work {
+            text-align: center;
+            margin-top: 400px;
+            margin-bottom: 100px;
+            position: relative;
+        }
+
+        .work img {
+            width: 950px;
+            height: 800px;
+            position: relative;
+        }
+
+        .work-front {
+            position: absolute;
+            top: 0;
+            left: 55px;
+
+        }
+
+        .work-back {
+            position: absolute;
+            top: 0;
+            right: 55px;
+        }
+
+        .work-screen {
+            position: relative;
+            width: 950px;
+            height: 800px;
+            background: url(classified-bg2.png)no-repeat;
+            background-size: 950px 800px;
+        }
+
+        .work-context {
+            position: absolute;
+            top: 151px;
+            left: 135px;
+            width: 700px;
+            height: 700px;
+        }
+
+        .work-context h2 {
+            font-size: 32px;
+            letter-spacing: 1;
+            color: #a7a1a1;
+        }
+
+        .work-context h3 {
+            font-size: 20px;
+            text-align: start;
+            padding: 20px 0;
+        }
+
+        .work-context p {
+            font-size: 18px;
+            padding-top: 2px;
+            text-align: start;
+        }
+
+        .footer {
+
+            margin-top: 300px;
+            text-align: center;
+            width: 100%;
+            height: 400px;
+            background-color: #131313;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header start -->
+    <header>
+        <nav class="nav_bar">
+            <ul>
+                <li><a href="">Profile</a></li>
+                <li><a href="">professional skill</a></li>
+                <li><a href="">work experience</a></li>
+                <li><a href="">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- header end -->
+
+    <!-- main start -->
+    <main>
+        <section class="marvel">
+            <div class="marve-box">
+                <img src="https://cdn.europosters.eu/image/hp/47626.jpg" alt="">
+
+                <h1>Who is your Hero?</h1>
+            </div>
+        </section>
+
+        <section class="profile">
+            <div class="profile-box">
+                <div class="pro-box">
+
+                    <div class="pro-item">
+
+                        <img src="https://www.parisbeacon.com/wp-content/uploads/2022/02/Iron-Man-3-Robert-Downey-Jr-Shane-Black-1160x870.jpg"
+                            alt="">
+
+                    </div>
+                    <div class="pro-item">
+                        <h2>Profile</h2>
+                        <p>
+                            姓名：<br>
+                            Iron Man / Tony Stark<br>
+                            自我介紹：<br>
+                            I am a highly intelligent and competent individual who is experienced in the fields of
+                            science and engineering.
+                            I have a Master's degree in both electrical engineering and physics, and as a young boy,
+                            I was heralded as a child genius. I am capable of using my initiative and thinking of my
+                            feet,
+                            and I am always capable of finding an innovative solution to any problems which may arise.
+                            I particularly pride myself on my ability to work efficiently as part of a team.
+                        </p>
+                    </div>
+                    <div class="pro-box">
+
+                        <div class="pro-item">
+
+                            <a href="#" target="_blank">
+                                <i class="fa-brands fa-facebook"></i>
+                                <i class="fa-brands fa-instagram"></i>
+                                <i class="fa-solid fa-envelope"></i>
+                                <i>...</i>
+
+                            </a>
+
+                        </div>
+                        <div class="pro-item">
+
+                            <img class="ironimg" src="https://pic.pimg.tw/kason2047/1409101244-3191675783_wn.jpg"
+                                alt="">
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+        </section>
+
+        <section class="professional-skill">
+            <div class="skills">
+                <h3>Professional skill</h3>
+                <ul>
+                    <li>
+                        <h4>Innovative thinker and Inventor</h4>
+                        <img src="https://www.cinefacts.it/foto/h!robert_downey_jr_elon_musk_cinefacts_copertina.jpg"
+                            alt="">
+                        <p>Identifying an issue, using available resources to develop a solution and testing the idea.
+                        </p>
+                    </li>
+                    <li>
+                        <h4>Analytical</h4>
+                        <img src="https://cdn.bestmovie.it/wp-content/uploads/2021/02/iron-man-3_0c4b8f-696x398.jpg"
+                            alt="">
+                        <p>Observing and researching a problem or topic to develop more complex ideas about it.</p>
+                    </li>
+                    <li>
+                        <h4>Adept with new technology</h4>
+                        <img src="https://townsquare.media/site/442/files/2013/05/iron-man-facts.jpg?w=1200&h=0&zc=1&s=0&a=t&q=89"
+                            alt="">
+                        <p>
+                            Acquiring the latest technical skills with high willingness and passion and applying it
+                            into
+                            daily work fast.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+        </section>
+
+        <section class="work-experience">
+            <div class="work">
+                <div class="work-front">
+                    <img src="classified-bg.png" alt="">
+                </div>
+                <div class="work-back">
+                    <div class="work-screen">
+                        <div class="work-context">
+                            <h2>Work experience</h2>
+
+                            <div>
+                                <h3>公司名稱：Maria Stark Foundation</h3>
+                                <p>職稱：Founder</p>
+                                <p>任職期間：不可考</p>
+                                <p>工作內容與成就：
+                                    Promoting affordable housing, community centers and other philanthropic gestures
+                                    Funding the repair firm Damage Control and the superhero team the Avengers
+                                </p>
+
+                            </div>
+                            <div>
+                                <h3>公司名稱：Stark Enterprises</h3>
+                                <p>職稱：CEO</p>
+                                <p>任職期間：不可考</p>
+                                <p>工作內容與成就：
+
+                                    Delegating everyday business running to Pepper Potts
+                                    Features in Forbes Magazine
+                                    Ranked as one of the ten most intelligent people by Business Week
+                                </p>
+
+                            </div>
+                            <div>
+                                <h3>公司名稱：US Government</h3>
+                                <p>職稱：Secretary of Defence</p>
+                                <p>任職期間：不可考</p>
+                                <p>工作內容與成就：
+
+                                    own area 51
+                                    Temporary joined Guardians of the Galaxy
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div><img src="https://pbs.twimg.com/profile_images/1439953850471911426/s4pE9SYa_400x400.jpg" alt=""></div>
+    </footer>
+
+</body>
+
+</html>
